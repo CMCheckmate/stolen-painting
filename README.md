@@ -2,6 +2,7 @@
 
 ## To run the game
 
+Run the following command in the terminal/command prompt of the main directory
 `./mvnw clean javafx:run`
 
 ## To setup the API to access Chat Completions and TTS
