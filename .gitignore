@@ -3,8 +3,6 @@
 
 #
 apiproxy.config
-codestyle.config
-!libs/codestyle.jar
 ### Eclipse ###
 .metadata
 bin/
