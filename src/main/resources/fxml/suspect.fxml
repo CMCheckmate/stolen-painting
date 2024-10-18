@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nz.ac.auckland.se206.controllers.SuspectController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="490.0" stroke="BLACK" strokeType="INSIDE" width="1280.0" />
+      <ImageView fx:id="backgroundImage" fitHeight="720.0" fitWidth="1280.0" opacity="0.75" pickOnBounds="true" />
+      <ImageView fitHeight="145.0" fitWidth="340.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/game_timer.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="timerLabel" layoutX="133.0" layoutY="23.0" prefHeight="79.0" prefWidth="155.0" text="05:00" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="48.0" />
+         </font>
+      </Label>
+      <GridPane layoutX="1085.0" layoutY="13.0" prefHeight="180.0" prefWidth="180.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="60.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="60.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="60.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="120.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" height="180.0" opacity="0.5" stroke="BLACK" strokeType="INSIDE" width="180.0" GridPane.columnSpan="3" GridPane.rowSpan="2" />
+            <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: white; -fx-border-style: solid solid none solid;" GridPane.columnSpan="3">
+               <children>
+                  <ImageView fx:id="crimeButton" fitHeight="118.0" fitWidth="178.0" layoutX="1.0" layoutY="1.0" onMouseClicked="#onToCrime" onMouseEntered="#onButtonHover" onMouseExited="#onButtonHover" pickOnBounds="true">
+                     <image>
+                        <Image url="@../images/background_images/crime_scene.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                  <Label fx:id="crimeLabel" alignment="CENTER" disable="true" layoutY="48.0" prefHeight="25.0" prefWidth="180.0" style="-fx-opacity: 1;" text="Shop" textFill="WHITE" visible="false">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane prefHeight="50.0" prefWidth="50.0" style="-fx-border-color: white; -fx-border-style: solid none solid solid;" GridPane.rowIndex="1">
+               <children>
+                  <ImageView fx:id="suspectButtonThree" fitHeight="58.0" fitWidth="58.0" layoutX="1.0" layoutY="1.0" onMouseClicked="#onToSuspect" onMouseEntered="#onButtonHover" onMouseExited="#onButtonHover" pickOnBounds="true">
+                     <image>
+                        <Image url="@../images/character_icons/employee.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                  <Label fx:id="suspectLabelThree" alignment="CENTER" layoutX="-12.0" layoutY="60.0" text="Employee" textFill="WHITE" visible="false">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane prefHeight="50.0" prefWidth="50.0" style="-fx-border-color: white; -fx-border-style: solid none solid solid;" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <children>
+                  <ImageView fx:id="suspectButtonTwo" fitHeight="58.0" fitWidth="58.0" layoutX="1.0" layoutY="1.0" onMouseClicked="#onToSuspect" onMouseEntered="#onButtonHover" onMouseExited="#onButtonHover" pickOnBounds="true">
+                     <image>
+                        <Image url="@../images/character_icons/guard.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                  <Label fx:id="suspectLabelTwo" alignment="CENTER" layoutX="-27.0" layoutY="60.0" text="Security Guard" textFill="WHITE" visible="false">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane prefHeight="0.0" prefWidth="0.0" style="-fx-border-color: white;" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <children>
+                  <ImageView fx:id="suspectButtonOne" fitHeight="58.0" fitWidth="58.0" layoutX="1.0" layoutY="1.0" onMouseClicked="#onToSuspect" onMouseEntered="#onButtonHover" onMouseExited="#onButtonHover" pickOnBounds="true">
+                     <image>
+                        <Image url="@../images/character_icons/owner.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                  <Label fx:id="suspectLabelOne" alignment="CENTER" layoutX="-40.0" layoutY="60.0" prefHeight="27.0" prefWidth="106.0" text="Shop Owner" textFill="WHITE" visible="false">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </children>
+      </GridPane>
+      <Pane layoutY="487.0" prefHeight="233.0" prefWidth="1280.0">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" height="233.0" opacity="0.75" stroke="BLACK" strokeType="INSIDE" width="1280.0" />
+            <ImageView fx:id="chatProfile" fitHeight="379.0" fitWidth="228.0" layoutX="62.0" layoutY="-147.0" pickOnBounds="true" preserveRatio="true" />
+            <TextArea fx:id="chatArea" editable="false" layoutX="266.0" layoutY="11.0" prefHeight="160.0" prefWidth="979.0" style="-fx-text-fill: white;" stylesheets="@../css/chat.css" wrapText="true">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </TextArea>
+            <TextField fx:id="chatInput" layoutX="688.0" layoutY="184.0" onKeyPressed="#onSendMessage" prefHeight="34.0" prefWidth="481.0" promptText="Chat with the suspect" style="-fx-background-radius: 40; -fx-background-color: rgba(240, 249, 255, 0.35); -fx-text-fill: white;">
+               <font>
+                  <Font size="16.0" />
+               </font></TextField>
+            <Button layoutX="1178.0" layoutY="184.0" mnemonicParsing="false" onAction="#onSendMessage" prefHeight="27.0" prefWidth="67.0" style="-fx-background-color: rgba(240, 249, 255, 0.5); -fx-background-radius: 40;" text="Send" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+               <effect>
+                  <Glow level="0.0" />
+               </effect></Button>
+         </children>
+      </Pane>
+   </children>
+</Pane>

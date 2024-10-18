@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<Pane fx:id="gamePane" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nz.ac.auckland.se206.controllers.CrimeController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="720.0" stroke="BLACK" strokeType="INSIDE" width="1280.0" />
+      <ImageView fitHeight="720.0" fitWidth="1280.0" opacity="0.75" pickOnBounds="true">
+         <image>
+            <Image url="@../images/background_images/crime_scene.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="132.0" fitWidth="340.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/game_timer.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="timerLabel" layoutX="133.0" layoutY="16.0" prefHeight="93.0" prefWidth="158.0" text="05:00" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="48.0" />
+         </font>
+      </Label>
+      <GridPane layoutX="1085.0" layoutY="13.0" prefHeight="180.0" prefWidth="180.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="60.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="60.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="60.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="120.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" height="180.0" opacity="0.5" stroke="BLACK" strokeType="INSIDE" width="180.0" GridPane.columnSpan="3" GridPane.rowSpan="2" />
+            <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: white; -fx-border-style: solid solid none solid;" GridPane.columnSpan="3">
+               <children>
+                  <ImageView fitHeight="118.0" fitWidth="178.0" layoutX="1.0" layoutY="1.0" opacity="0.5" pickOnBounds="true">
+                     <image>
+                        <Image url="@../images/background_images/crime_scene.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane prefHeight="50.0" prefWidth="50.0" style="-fx-border-color: white; -fx-border-style: solid none solid solid;" GridPane.rowIndex="1">
+               <children>
+                  <ImageView fx:id="suspectButtonThree" fitHeight="58.0" fitWidth="58.0" layoutX="1.0" layoutY="1.0" onMouseClicked="#onToSuspect" onMouseEntered="#onButtonHover" onMouseExited="#onButtonHover" pickOnBounds="true">
+                     <image>
+                        <Image url="@../images/character_icons/employee.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                  <Label fx:id="suspectLabelThree" alignment="CENTER" layoutX="-12.0" layoutY="60.0" text="Employee" textFill="WHITE" visible="false">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane prefHeight="50.0" prefWidth="50.0" style="-fx-border-color: white; -fx-border-style: solid none solid solid;" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <children>
+                  <ImageView fx:id="suspectButtonTwo" fitHeight="58.0" fitWidth="58.0" layoutX="1.0" layoutY="1.0" onMouseClicked="#onToSuspect" onMouseEntered="#onButtonHover" onMouseExited="#onButtonHover" pickOnBounds="true">
+                     <image>
+                        <Image url="@../images/character_icons/guard.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                  <Label fx:id="suspectLabelTwo" alignment="CENTER" layoutX="-27.0" layoutY="60.0" text="Security Guard" textFill="WHITE" visible="false">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane prefHeight="0.0" prefWidth="0.0" style="-fx-border-color: white;" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <children>
+                  <ImageView fx:id="suspectButtonOne" fitHeight="58.0" fitWidth="58.0" layoutX="1.0" layoutY="1.0" onMouseClicked="#onToSuspect" onMouseEntered="#onButtonHover" onMouseExited="#onButtonHover" pickOnBounds="true">
+                     <image>
+                        <Image url="@../images/character_icons/owner.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                  <Label fx:id="suspectLabelOne" alignment="CENTER" layoutX="-40.0" layoutY="60.0" prefHeight="27.0" prefWidth="105.0" text="Shop Owner" textFill="WHITE" visible="false">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </children>
+      </GridPane>
+      <ImageView fx:id="guessButton" fitHeight="117.0" fitWidth="116.0" layoutX="1149.0" layoutY="231.0" onMouseClicked="#onToggleGuess" onMouseEntered="#onObjectHover" onMouseExited="#onObjectHover" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/make_guess_button.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="guessButtonLabel" layoutX="1142.0" layoutY="349.0" text="Guess Thief" textFill="WHITE" visible="false">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="instructionLabel" alignment="CENTER" layoutX="225.0" layoutY="109.0" opacity="0.0" prefHeight="47.0" prefWidth="835.0" text="Interact with any clue and chat with all the suspects before guessing" textFill="WHITE">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="246.0" fitWidth="205.0" layoutX="563.0" layoutY="172.0" pickOnBounds="true" rotate="-1.5" style="-fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.70), 10, 0.5, 5, 5);">
+         <image>
+            <Image url="@../images/frame_clue/new_frame.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="58.0" fitWidth="92.0" layoutX="773.0" layoutY="339.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/frame_clue/frame_label.png" />
+         </image>
+      </ImageView>
+      <Pane fx:id="radioLabel" layoutX="809.0" layoutY="416.0" prefHeight="43.0" prefWidth="86.0" style="-fx-border-color: white; -fx-border-width: 2;" visible="false">
+         <children>
+            <Label layoutX="20.0" layoutY="-30.0" prefHeight="27.0" prefWidth="128.0" text="Radio" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane fx:id="computerLabel" layoutX="453.0" layoutY="361.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="103.0" prefWidth="117.0" style="-fx-border-color: white; -fx-border-width: 2;" visible="false">
+         <children>
+            <Label alignment="CENTER" layoutX="17.0" layoutY="-30.0" text="Computer" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane fx:id="frameLabel" layoutX="705.0" layoutY="351.0" prefHeight="58.0" prefWidth="75.0" style="-fx-border-color: white; -fx-border-width: 2;" translateX="65.0" translateY="-10.0" visible="false">
+         <children>
+            <Label layoutX="15.0" layoutY="-30.0" text="Sign" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <ImageView fx:id="radioSide" fitHeight="44.0" fitWidth="68.0" layoutX="820.0" layoutY="424.0" onMouseClicked="#onCluePane" onMouseEntered="#onObjectHover" onMouseExited="#onObjectHover" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/radio_clue/radio_side.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="compDesk" fitHeight="111.0" fitWidth="117.0" layoutX="455.0" layoutY="355.0" onMouseClicked="#onCluePane" onMouseEntered="#onObjectHover" onMouseExited="#onObjectHover" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/computer_clue/computer_desktop_view.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="framePuzzle" fitHeight="30.0" fitWidth="50.0" layoutX="789.0" layoutY="353.0" onMouseClicked="#onCluePane" onMouseEntered="#onObjectHover" onMouseExited="#onObjectHover" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/frame_clue/label_full.png" />
+         </image>
+      </ImageView>
+      <Pane fx:id="radioPane" prefHeight="720.0" prefWidth="1280.0" visible="false">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" height="720.0" onMouseClicked="#onCluePane" opacity="0.5" stroke="BLACK" strokeType="INSIDE" width="1280.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" height="191.0" layoutX="524.0" layoutY="233.0" stroke="BLACK" strokeType="INSIDE" width="239.0" />
+            <ImageView fitHeight="180.0" fitWidth="227.0" layoutX="527.0" layoutY="236.0" pickOnBounds="true" scaleX="1.2">
+               <image>
+                  <Image url="@../images/radio_clue/sine_wave.gif" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="radioWave" fitHeight="180.0" fitWidth="227.0" layoutX="527.0" layoutY="236.0" pickOnBounds="true" scaleX="1.63">
+               <image>
+                  <Image url="@../images/radio_clue/sine_wave.gif" />
+               </image>
+               <viewport>
+                  <Rectangle2D />
+               </viewport>
+            </ImageView>
+            <ImageView fitHeight="720.0" fitWidth="475.0" layoutX="400.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/radio_clue/newRadio.png" />
+               </image>
+            </ImageView>
+            <Slider fx:id="radioWaveSlider" blockIncrement="1.0" layoutX="599.0" layoutY="439.0" onMouseDragged="#onRadioTune" prefHeight="27.0" prefWidth="70.0" scaleX="1.5" scaleY="1.5" translateX="5.0" translateY="7.5" value="100.0" />
+            <ImageView fx:id="radioPlay" fitHeight="60.0" fitWidth="60.0" layoutX="706.0" layoutY="430.0" onMouseClicked="#onClueOnePlay" onMouseEntered="#onObjectHover" onMouseExited="#onObjectHover" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/radio_clue/red_radio_button.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="53.0" fitWidth="60.0" layoutX="523.0" layoutY="433.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/radio_clue/red_led.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="radioGreenLight" fitHeight="53.0" fitWidth="60.0" layoutX="523.0" layoutY="433.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../images/radio_clue/green_led.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane fx:id="computerPane" prefHeight="720.0" prefWidth="1280.0" visible="false">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" height="720.0" onMouseClicked="#onCluePane" opacity="0.5" stroke="BLACK" strokeType="INSIDE" width="1280.0" />
+            <ImageView fitHeight="576.0" fitWidth="747.0" layoutX="315.0" layoutY="120.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/computer_clue/computer_frame.png" />
+               </image>
+            </ImageView>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="368.0" layoutX="330.0" layoutY="137.0" stroke="BLACK" strokeType="INSIDE" width="602.0" />
+            <Pane fx:id="clueTabOne" layoutX="331.0" layoutY="137.0" prefHeight="374.0" prefWidth="602.0">
+               <children>
+                  <ImageView fitHeight="374.0" fitWidth="602.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/computer_clue/wallpaper.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="117.0" fitWidth="117.0" layoutX="254.0" layoutY="97.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/computer_clue/profile_icon.png" />
+                     </image>
+                  </ImageView>
+                  <TextField fx:id="passwordInput" alignment="CENTER" layoutX="189.0" layoutY="247.0" onKeyPressed="#onSubmitPassword" prefHeight="43.0" prefWidth="222.0" promptText="Enter Password" style="-fx-background-radius: 25; -fx-background-color: #eafcff;">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </TextField>
+                  <Button layoutX="418.0" layoutY="250.0" mnemonicParsing="false" onAction="#onSubmitPassword" prefHeight="37.0" prefWidth="37.0" style="-fx-background-radius: 50; -fx-background-color: #eafcff;" text="→" textFill="#8a8989" />
+                  <Label fx:id="passwordLabel" layoutX="236.0" layoutY="306.0" opacity="0.0" text="Incorrect Password" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <ScrollPane fx:id="clueTabTwo" layoutX="332.0" layoutY="137.0" prefHeight="373.0" prefWidth="601.0" style="-fx-font-size: 20;" stylesheets="@../css/chat.css" visible="false">
+               <content>
+                  <Pane prefHeight="583.0" prefWidth="587.0">
+                     <children>
+                        <ImageView fitHeight="580.0" fitWidth="602.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/computer_clue/email_inbox.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+               </content>
+            </ScrollPane>
+            <ImageView fitHeight="237.0" fitWidth="272.0" layoutX="722.0" layoutY="495.0" pickOnBounds="true" preserveRatio="true" rotate="-2.0">
+               <image>
+                  <Image url="@../images/computer_clue/sticky_note.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane fx:id="framePane" prefHeight="720.0" prefWidth="1280.0" visible="false">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" height="720.0" onMouseClicked="#onCluePane" opacity="0.5" stroke="BLACK" strokeType="INSIDE" width="1280.0" />
+            <ImageView fitHeight="308.0" fitWidth="445.0" layoutX="418.0" layoutY="209.0" pickOnBounds="true" preserveRatio="true" scaleX="1.36" scaleY="1.36">
+               <image>
+                  <Image url="@../images/frame_clue/frame_bg.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="puzzlePieceFour" fitHeight="295.0" fitWidth="330.0" layoutX="535.0" layoutY="223.0" onMouseDragged="#onDragPiece" onMouseEntered="#onObjectHover" onMouseExited="#onObjectHover" onMousePressed="#onToggleHand" onMouseReleased="#onToggleHand" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/frame_clue/piece_two.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fx:id="puzzlePieceOne" fitHeight="180.0" fitWidth="297.0" layoutX="478.0" layoutY="232.0" onMouseDragged="#onDragPiece" onMouseEntered="#onObjectHover" onMouseExited="#onObjectHover" onMousePressed="#onToggleHand" onMouseReleased="#onToggleHand" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/frame_clue/piece_four.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fx:id="puzzlePieceThree" fitHeight="283.0" fitWidth="195.0" layoutX="544.0" layoutY="175.0" onMouseDragged="#onDragPiece" onMouseEntered="#onObjectHover" onMouseExited="#onObjectHover" onMousePressed="#onToggleHand" onMouseReleased="#onToggleHand" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/frame_clue/piece_three.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fx:id="puzzlePieceTwo" fitHeight="249.0" fitWidth="222.0" layoutX="490.0" layoutY="269.0" onMouseDragged="#onDragPiece" onMouseEntered="#onObjectHover" onMouseExited="#onObjectHover" onMousePressed="#onToggleHand" onMouseReleased="#onToggleHand" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/frame_clue/piece_one.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fx:id="puzzlePieceFive" fitHeight="120.0" fitWidth="251.0" layoutX="515.0" layoutY="249.0" onMouseDragged="#onDragPiece" onMouseEntered="#onObjectHover" onMouseExited="#onObjectHover" onMousePressed="#onToggleHand" onMouseReleased="#onToggleHand" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/frame_clue/piece_five.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane fx:id="guessConfirmPane" prefHeight="720.0" prefWidth="1280.0" visible="false">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" height="720.0" onMouseClicked="#onCluePane" opacity="0.5" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="1280.0" />
+            <Label layoutX="189.0" layoutY="266.0" text="You will no longer be able to interact with any clues or suspects." textFill="WHITE">
+               <font>
+                  <Font size="32.0" />
+               </font>
+            </Label>
+            <Button layoutX="395.0" layoutY="389.0" mnemonicParsing="false" onAction="#onToGuess" onMouseEntered="#onTextButtonHover" onMouseExited="#onTextButtonHover" prefHeight="65.0" prefWidth="171.0" style="-fx-background-color: maroon; -fx-background-radius: 40;" text="Continue" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font>
+            </Button>
+            <Button fx:id="cancelButton" layoutX="715.0" layoutY="389.0" mnemonicParsing="false" onAction="#onToggleGuess" onMouseEntered="#onTextButtonHover" onMouseExited="#onTextButtonHover" prefHeight="65.0" prefWidth="171.0" style="-fx-background-color: darkgray; -fx-background-radius: 40;" text="Cancel" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <Pane fx:id="transitionPane" disable="true" opacity="0.0" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: black;">
+         <children>
+            <Label fx:id="transitionLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="268.0" layoutY="273.0" style="-fx-opacity: 1;" textFill="WHITE">
+               <font>
+                  <Font size="64.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</Pane>

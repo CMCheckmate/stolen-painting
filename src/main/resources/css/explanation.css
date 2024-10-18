@@ -1,0 +1,24 @@
+.text-area,
+.text-area .viewport,
+.text-area .content,
+.scroll-pane,
+.scroll-pane .viewport,
+.scroll-pane .content {
+    -fx-background-radius: 30; /* Rounded corners for background */
+    -fx-background-color:  rgba(70, 70, 70, 0.35); /* Rounded corners for background */
+}
+
+.text-area {
+    -fx-text-fill: white;      /* Ensures text inside TextArea is white */
+}
+
+.scroll-pane {
+  -fx-hbar-policy: NEVER; /* Hide horizontal scrollbar */
+  -fx-background-radius: 30; /* Ensures scroll pane's background also has rounded corners */
+  -fx-border-radius: 30;
+}
+
+/* .text-area .scroll-pane {
+  -fx-hbar-policy: NEVER;
+  -fx-vbar-policy: NEVER;
+} */

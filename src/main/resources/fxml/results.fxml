@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<Pane prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nz.ac.auckland.se206.controllers.ResultsController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="720.0" stroke="BLACK" strokeType="INSIDE" width="1280.0" />
+      <ImageView fitHeight="720.0" fitWidth="1280.0" opacity="0.6" pickOnBounds="true">
+         <image>
+            <Image url="@../images/background_images/crime_scene.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="guessedImage" fitHeight="150.0" fitWidth="150.0" layoutX="583.0" layoutY="128.0" pickOnBounds="true" preserveRatio="true" />
+      <TextArea fx:id="explanationArea" editable="false" layoutX="298.0" layoutY="387.0" prefHeight="175.0" prefWidth="720.0" stylesheets="@../css/explanation.css" wrapText="true">
+         <font>
+            <Font size="19.0" />
+         </font></TextArea>
+      <Button layoutX="710.0" layoutY="600.0" mnemonicParsing="false" onAction="#onRestart" onMouseEntered="#onTextButtonHover" onMouseExited="#onTextButtonHover" prefHeight="31.0" prefWidth="171.0" style="-fx-background-color: rgba(80, 80, 80, 0.75); -fx-background-radius: 40;" text="New Game" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Button>
+      <Button layoutX="410.0" layoutY="600.0" mnemonicParsing="false" onAction="#onReturnToMenu" onMouseEntered="#onTextButtonHover" onMouseExited="#onTextButtonHover" prefHeight="45.0" prefWidth="135.0" style="-fx-background-color: rgba(80, 80, 80, 0.75); -fx-background-radius: 40;" text="Menu" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Button>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="555.0" layoutY="278.0" text="The Thief was" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="32.0" />
+         </font>
+      </Label>
+      <Label fx:id="resultLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="471.0" layoutY="325.0" prefHeight="47.0" prefWidth="374.0" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="32.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>

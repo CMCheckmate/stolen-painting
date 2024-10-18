@@ -1,0 +1,10 @@
+@font-face {
+  font-family: 'Agatho';
+  src: url('../fonts/Agatho_Bold.ttf');
+}
+
+.custom-text {
+  -fx-font-family: 'Agatho';
+  -font-family: 'Agatho';
+  font-family: 'Agatho';
+}

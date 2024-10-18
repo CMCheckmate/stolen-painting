@@ -1,0 +1,5 @@
+.shadowed-text {
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 5, 0.5, 5, 5); /* Shadow opacity */
+    -fx-font-size: 64px;
+    -fx-fill: #000000; /* Text colour (fully opaque) */
+}

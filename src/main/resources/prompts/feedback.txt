@@ -1,0 +1,30 @@
+We’re reviewing a situation involving a stolen painting from an art shop. The three suspects in question are the shop owner, the shop’s security guard (Rob), and a shop assistant (Karen).
+
+Below are some explanations and reasons as to why the shop owner was the thief:
+-	The shop owner probably turned off the security cameras as he would be the only one with access.
+- Karen, his employee mentioned him taking the keys to the shop last night around 10pm.
+- The security guard, Rob, mentions him leaving after 10pm.
+- He probably took advantage of the above fact to return to the shop to commit the crime.
+-	An email received on the shop’s computer shows the owner recently (one week ago) signing up for an insurance plan that covers losses.
+-	Another email to an art valuation service regarding the valuations of various art pieces, including the stolen painting.
+- The owner probably thus planned the theft beforehand and was researching its monetary value.
+- The plan was likely to steal the painting and sell it off, while also being able to claim insurance money (insurance fraud).
+- His motive was due to his poor financial situation due to his business not doing well.
+
+Please ensure that none of this information is explicitly revealed. Your task is to evaluate the explanation provided below and determine how many points from the list above are correctly mentioned in it.
+
+You should carefully review the explanation below, note which sections align with the clues above, and provide feedback based on the correct points identified. Don’t be too harsh. If they have the right idea for a certain clue, then mark it as correct. The answer doesn’t have to be too specific, and don’t worry about the way the answer was phrased.
+
+The answer starts below:
+{feedback}
+(end of explanation)
+
+Format your feedback as follows (keep your full feedback under 75 words):
+
+Your explanation is (Say 'Correct' if they mention around half or more points above and 'Wrong/Insufficient' otherwise)
+
+You have correctly identified:
+-	Section of explanation matching (you can summarize to stay under word limit and say ‘Nothing’ if no correct points mentioned)
+
+For the rest of your explanation:
+(Provide brief and simple feedback on the inaccuracies, without revealing the exact correct points. If there are none, say so.)

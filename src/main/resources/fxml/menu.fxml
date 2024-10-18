@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<Pane fx:id="menuPane" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nz.ac.auckland.se206.controllers.MenuController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="720.0" stroke="BLACK" strokeType="INSIDE" width="1280.0" />
+      <ImageView fitHeight="720.0" fitWidth="1280.0" opacity="0.6" pickOnBounds="true">
+         <image>
+            <Image url="@../images/background_images/main_menu.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="495.0" fitWidth="457.0" layoutX="736.0" layoutY="142.0" pickOnBounds="true" preserveRatio="true" rotate="14.9">
+         <image>
+            <Image url="@../images/main_menu_in-scene_icon.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="title" alignment="CENTER" layoutX="55.0" layoutY="53.0" prefHeight="442.0" prefWidth="686.0" text="The Stolen Painting" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+         <font>
+            <Font name="System Bold" size="72.0" />
+         </font>
+      </Label>
+      <Button layoutX="296.0" layoutY="421.0" mnemonicParsing="false" onAction="#onStartGame" onMouseEntered="#onButtonHover" onMouseExited="#onButtonHover" prefHeight="40.0" prefWidth="170.0" style="-fx-background-color: transparent;" text="Start" textFill="WHITE">
+         <font>
+            <Font size="36.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button layoutX="315.0" layoutY="495.0" mnemonicParsing="false" onAction="#onToggleInstructions" onMouseEntered="#onButtonHover" onMouseExited="#onButtonHover" prefHeight="77.0" prefWidth="131.0" style="-fx-background-color: transparent;" text="Help" textFill="WHITE">
+         <font>
+            <Font size="36.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button layoutX="315.0" layoutY="572.0" mnemonicParsing="false" onAction="#onExit" onMouseEntered="#onButtonHover" onMouseExited="#onButtonHover" prefHeight="77.0" prefWidth="131.0" style="-fx-background-color: transparent;" text="Exit" textFill="WHITE">
+         <font>
+            <Font size="36.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <ImageView fx:id="muteButton" fitHeight="94.0" fitWidth="79.0" layoutX="1187.0" layoutY="628.0" onMouseClicked="#onMuteButtonClick" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/mute_button/mute_button.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="unmuteButton" fitHeight="94.0" fitWidth="79.0" layoutX="1187.0" layoutY="628.0" onMouseClicked="#onUnmuteButtonClick" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/mute_button/unmute_button.png" />
+         </image>
+      </ImageView>
+      <Pane fx:id="instructionPane" prefHeight="720.0" prefWidth="1280.0" visible="false">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" height="720.0" onMouseClicked="#onToggleInstructions" opacity="0.85" stroke="BLACK" strokeType="INSIDE" width="1280.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2c2c2c" height="564.0" layoutX="184.0" layoutY="78.0" opacity="0.85" stroke="WHITE" strokeType="INSIDE" strokeWidth="3.0" width="912.0" />
+            <Label layoutX="278.0" layoutY="101.0" prefHeight="127.0" prefWidth="725.0" text="Your goal is to investigate and find the thief among the given suspects" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="36.0" />
+               </font>
+            </Label>
+            <Label layoutX="309.0" layoutY="265.0" text="Investigate the crime by interacting with the clues in the scene." textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="329.0" layoutY="342.0" text="The suspects of the case are also available for conversation" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="316.0" layoutY="407.0" prefHeight="95.0" prefWidth="649.0" text="You are required to interact with at least 1 clue and chat to all 3 suspects before you are allowed to guess." textAlignment="CENTER" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="316.0" layoutY="524.0" prefHeight="95.0" prefWidth="649.0" text="You have 5 minutes for your investigation. Guess the thief correctly with a reasonable explanation to win!" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</Pane>
